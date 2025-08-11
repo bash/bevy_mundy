@@ -3,7 +3,6 @@ use bevy_ecs::prelude::*;
 use bevy_tasks::IoTaskPool;
 use bevy_tasks::futures_lite::StreamExt;
 use mundy::Interest;
-pub use mundy::{ColorScheme, Contrast, DoubleClickInterval, ReducedMotion, ReducedTransparency};
 
 mod preferences;
 pub use preferences::*;
