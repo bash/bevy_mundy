@@ -1,0 +1,23 @@
+[package]
+name = "bevy_mundy"
+version = "0.1.0"
+edition = "2024"
+license = "MIT or Apache-2.0"
+
+[dependencies]
+bevy_app = { version = "0.16.1", default-features = false, features = ["std", "bevy_reflect"] }
+bevy_color = { version = "0.16.2", default-features = false, features = ["std", "bevy_reflect"] }
+bevy_ecs = { version = "0.16.1", default-features = false, features = ["std", "bevy_reflect"] }
+bevy_reflect = { version = "0.16.1", default-features = false, features = ["std"] }
+bevy_tasks = "0.16.1"
+crossbeam-channel = "0.5.15"
+mundy = { version = "0.1.10", default-features = false, features = ["async-io"] }
+
+[features]
+default = ["color-scheme", "contrast", "reduced-motion", "reduced-transparency", "accent-color", "double-click-interval"]
+color-scheme = ["mundy/color-scheme"]
+contrast = ["mundy/contrast"]
+reduced-motion = ["mundy/reduced-motion"]
+reduced-transparency = ["mundy/reduced-transparency"]
+accent-color = ["mundy/accent-color"]
+double-click-interval = ["mundy/double-click-interval"]
