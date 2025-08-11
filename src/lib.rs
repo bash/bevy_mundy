@@ -30,7 +30,7 @@ fn subscribe_to_preferencs(mut commands: Commands) {
     let (tx, rx) = crossbeam_channel::unbounded();
     let stream = mundy::Preferences::stream(Interest::All);
     IoTaskPool::get()
-        .spawn(async move { forward_stream_to_receiver(tx, stream) })
+        .spawn(async move { forward_stream_to_receiver(tx, stream).await })
         .detach();
     commands.insert_resource(Receiver(rx));
 }
