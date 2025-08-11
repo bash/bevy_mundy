@@ -866,6 +866,7 @@ dependencies = [
  "dispatch",
  "futures-channel",
  "futures-lite",
+ "log",
  "objc2",
  "objc2-app-kit",
  "objc2-foundation",
