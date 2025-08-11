@@ -20,6 +20,7 @@ impl Plugin for MundyPlugin {
         app.register_type::<Preferences>()
             .configure_sets(Startup, MundySystems)
             .configure_sets(PreUpdate, MundySystems)
+            .init_resource::<Preferences>()
             .add_systems(Startup, subscribe_to_preferencs.in_set(MundySystems))
             .add_systems(PreUpdate, poll_system_preferences.in_set(MundySystems));
     }
